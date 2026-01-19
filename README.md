@@ -1,8 +1,7 @@
-## The "What ?" and the "Why ?"
+## The API builder that lets you see whas hapnen
 
-**Carte** is a simple Jekyll based documentation website for APIs. It is designed as a boilerplate to build your own documentation and is heavily inspired from [Swagger](http://swagger.wordnik.com/) and [I/O docs](http://www.mashery.com/product/io-docs). Fork it, add specifications for your APIs calls and customize the theme. <small>Go ahead, see if we care.</small>
+**callaback** is a simple Jekyll based documentation website for APIs. It is designed as a boilerplate to build your own documentation and add specifications for your APIs calls and customize the theme. <small>callaback no care</small>
 
-We built **Carte** because the existing options (Swagger and the likes) were trying to do too much and did not match our needs:
 
 1. Most of our API calls are sending JSON objects, as opposed to a series of parameters,
 1. Being able to query the real API is nice, but running anything but `GET` calls can get tricky ("What do you mean I deleted my stuff? I was just trying out the API calls!"),
@@ -12,13 +11,14 @@ The real value of **Carte** is its structure for describing APIs, not its underl
 
 ## Install
 
-It' Jekyll god dammit:
+It' Jekyll son...
 
 1. Clone this repository on your local,
+
 1. [Install Jekyll](https://github.com/mojombo/jekyll/wiki/install),
 1. Go at the root of the repository and run ```jekyll serve --watch```,
 1. Go to http://localhost:4000,
-1. [Great success! High five!](http://www.youtube.com/watch?v=wWWyJwHQ-4E)
+
 
 ## How to...
 
@@ -65,6 +65,6 @@ layout: nil
 
 ### Edit the design
 
-The default UI is mostly described through the `css/style.css` file and a couple short jQuery scripts in the `/_layouts/default.html` layout. Hack it to oblivion.
-# callaback.github.io
-# callaback.github.io
+The default UI is mostly described through the `css/style.css` file and a couple short jQuery scripts in the `/_layouts/default.html` layout. Hack your hearet out
+
+
