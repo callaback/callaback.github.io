@@ -1,70 +1,67 @@
-## The API builder that lets you see whas hapnen
+## 🔧 The API builder that lets you see what's happening
 
-**callaback** is a simple Jekyll based documentation website for APIs. It is designed as a boilerplate to build your own documentation and add specifications for your APIs calls and customize the theme. <small>callaback no care</small>
+**callback** is a Jekyll-based documentation boilerplate for APIs. Build your docs, add API specs, customize the theme.
 
+### Why we built this
 
-1. Most of our API calls are sending JSON objects, as opposed to a series of parameters,
-1. Being able to query the real API is nice, but running anything but `GET` calls can get tricky ("What do you mean I deleted my stuff? I was just trying out the API calls!"),
-1. Overall, setting up a separate server for what really requires a good static documentation seemed overkill.
+- Our APIs send JSON objects, not parameter strings
+- Testing live APIs is risky (nobody wants accidental deletes)
+- Running a server for static docs felt like overkill
 
-The real value of **Carte** is its structure for describing APIs, not its underlying technical stack (or lack-thereof). In a nutshell; **we built a static template for your API documentation, feel free to re-use it**.
+**The real value?** A solid structure for API documentation. Use it as a template.
 
-## Install
+---
 
-It' Jekyll son...
+## 🚀 Install
 
-1. Clone this repository on your local,
+It's Jekyll...
 
-1. [Install Jekyll](https://github.com/mojombo/jekyll/wiki/install),
-1. Go at the root of the repository and run ```jekyll serve --watch```,
-1. Go to http://localhost:4000,
+1. Clone this repo
+2. [Install Jekyll](https://github.com/mojombo/jekyll/wiki/install)
+3. Run `jekyll serve --watch` at the root
+4. Open `http://localhost:4000`
 
+---
 
-## How to...
+## 📝 How to...
 
-### Adding a new API call
+### Add a new API call
 
-You can add a new API call by simply adding a new post in the `_posts` folder. Jekyll by default forces you to specify a date in the file path: it makes us sad pandas too, but you'll have to stick to this format. You can use dates to control the order in which API calls are displayed in the interface.
+Create a new post in `_posts/`. Jekyll requires dates in filenames (yeah, we know). Use dates to control display order.
 
-Each API call can define a few values in its YAML header:
+**YAML header options:**
 
-Variable | Mandatory | Default | Description
---- | --- | --- | ---
-``title`` | Y | - | A short description of what that calls does.
-``path`` | N | - | The URL for the API call, including potential parameters.
-``type`` | N | - | Set it to `PUT`, `GET`, `POST`, `DELETE` or nothing (for parts of your documentation that do not relate to an actual API call).
+| Variable | Required | Description |
+|----------|----------|-------------|
+| `title` | ✅ | Short description of the call |
+| `path` | ❌ | URL path with parameters |
+| `type` | ❌ | `GET` `POST` `PUT` `DELETE` or leave blank |
 
-A typical header:
-
-```
+**Example:**
+```yaml
 ---
 path: '/stuff/:id'
 title: 'Delete a thing'
 type: 'DELETE'
-
-layout: nil
 ---
 ```
 
-We then describe the request and response (or whatever else you wish to talk about) in the body of our post. Check the placeholders present in the `_posts` folder to get an idea of what it can look like.
+Add request/response details in the post body. Check `_posts` for examples.
 
-### Grouping calls
+### Group calls
 
-Adding a category to your YAML header will allows you to group methods in the navigation. It is particularly helpful as you start having a lot of methods and need to organize them. For example:
-
-```
+Add `category` to group methods in navigation:
+```yaml
 ---
 category: Stuff
 path: '/stuff/:id'
 title: 'Delete a thing'
 type: 'DELETE'
-
-layout: nil
 ---
 ```
 
-### Edit the design
+### Customize design
 
-The default UI is mostly described through the `css/style.css` file and a couple short jQuery scripts in the `/_layouts/default.html` layout. Hack your hearet out
+Edit `css/style.css` and jQuery scripts in `/_layouts/default.html`. Make it yours.
 
 
